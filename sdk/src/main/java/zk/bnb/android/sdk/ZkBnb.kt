@@ -10,9 +10,10 @@ import zk.bnb.android.sdk.models.Account
 import zk.bnb.android.sdk.models.request.AccountRequestType
 import zk.bnb.android.sdk.models.NetworkStatus
 import zk.bnb.android.sdk.models.request.AssetRequestType
+import zk.bnb.android.sdk.models.request.BlockRequestType
+import zk.bnb.android.sdk.models.request.RequestSendTx
 import zk.bnb.android.sdk.network.NetworkConfig
 import zk.bnb.android.sdk.network.NetworkFactory
-import zk.bnb.android.sdk.network.ZkBnbApiService
 
 @SuppressLint("StaticFieldLeak")
 object ZkBnb {
@@ -163,6 +164,222 @@ object ZkBnb {
             validateOffsetAndLimit(offset, limit)
             val account =
                 apiService.getAssets(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getBlock(
+        blockRequestType: BlockRequestType,
+        value: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getBlock(blockRequestType.name.lowercase(), value)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getBlockTxs(
+        blockRequestType: BlockRequestType,
+        value: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getBlockTxs(blockRequestType.name.lowercase(), value)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getBlocks(
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getBlocks(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getCurrentHeight(
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getCurrentHeight()
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getGasAccount(
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getGasAccount()
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getGasFee(
+        assetId: Int,
+        txType: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getGasFee(assetId, txType)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getGasFeeAssets(
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getGasFeeAssets()
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getLayer2BasicInfo(
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getLayer2BasicInfo()
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getMaxOfferId(
+        accountIndex: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getMaxOfferId(accountIndex)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getPendingTransactions(
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getPendingTransactions(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getExecutedTransactions(
+        offset: Int,
+        limit: Int,
+        fromHash: String?,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getExecutedTransactions(offset, limit, fromHash)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getNextNonce(
+        accountIndex: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getNextNonce(accountIndex)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun search(
+        keyword: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.search(keyword)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getTransactionByHash(
+        hash: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getTransaction(hash)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getTransactions(
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getTransactions(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun sendTransaction(
+        requestSendTx: RequestSendTx,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.sendTransaction(requestSendTx)
             withContext(Dispatchers.Main) {
                 taskListener.onSuccess(account)
             }
