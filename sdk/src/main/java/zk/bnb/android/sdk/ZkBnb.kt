@@ -9,6 +9,7 @@ import kotlinx.coroutines.*
 import zk.bnb.android.sdk.models.Account
 import zk.bnb.android.sdk.models.request.AccountRequestType
 import zk.bnb.android.sdk.models.NetworkStatus
+import zk.bnb.android.sdk.models.request.AssetRequestType
 import zk.bnb.android.sdk.network.NetworkConfig
 import zk.bnb.android.sdk.network.NetworkFactory
 import zk.bnb.android.sdk.network.ZkBnbApiService
@@ -64,10 +65,11 @@ object ZkBnb {
     private fun <T> launchApiRequest(taskListener: TaskListener<T>, handler: suspend () -> Unit) {
         lifecycleScope().launch(Dispatchers.IO + CoroutineExceptionHandler { context, throwable ->
             lifecycleScope().launch(Dispatchers.Main) {
+                throwable.printStackTrace()
                 taskListener.onError(throwable)
             }
         }) {
-           handler()
+            handler()
         }
     }
 
@@ -80,12 +82,99 @@ object ZkBnb {
         }
     }
 
-    fun getAccount(accountRequestType: AccountRequestType, value: String, taskListener: TaskListener<Account>) {
+    fun getAccount(
+        accountRequestType: AccountRequestType,
+        value: String,
+        taskListener: TaskListener<Account>
+    ) {
         launchApiRequest(taskListener) {
             val account = apiService.getAccount(accountRequestType.name.lowercase(), value)
             withContext(Dispatchers.Main) {
                 taskListener.onSuccess(account)
             }
+        }
+    }
+
+    fun getAccountPendingTxs(
+        accountRequestType: AccountRequestType,
+        value: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getAccountPendingTxs(accountRequestType.name.lowercase(), value)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getAccountNfts(
+        accountRequestType: AccountRequestType,
+        value: String,
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getAccountNfts(accountRequestType.name.lowercase(), value, offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getAccounts(
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getAccounts(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getAsset(
+        assetRequestType: AssetRequestType,
+        value: String,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            val account = apiService.getAsset(assetRequestType.name.lowercase(), value)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    fun getAssets(
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Account>
+    ) {
+        launchApiRequest(taskListener) {
+            validateOffsetAndLimit(offset, limit)
+            val account =
+                apiService.getAssets(offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
+    private fun validateOffsetAndLimit(offset: Int, limit: Int) {
+        if (offset < 0 || offset > 100000) {
+            throw IllegalArgumentException("Invalid offset value, offset should be between 0 and 100000")
+        }
+        if (limit < 1 || limit > 100) {
+            throw IllegalArgumentException("Invalid limit value, limit should be between 1 and 100")
         }
     }
 

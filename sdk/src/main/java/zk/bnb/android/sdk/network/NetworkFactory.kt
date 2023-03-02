@@ -26,7 +26,9 @@ class NetworkFactory(
             writeTimeout(networkConfig.timeout, TimeUnit.SECONDS)
             readTimeout(networkConfig.timeout, TimeUnit.SECONDS)
             if (networkConfig.isDebug) {
-                addInterceptor(HttpLoggingInterceptor())
+                addInterceptor(HttpLoggingInterceptor().apply {
+                    level = HttpLoggingInterceptor.Level.BODY
+                })
             }
         }
         return okHttpClientBuilder.build()

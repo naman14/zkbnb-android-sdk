@@ -9,11 +9,13 @@
         android:id="@+id/tvParamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         tools:text="AccountRequestType" />
 
     <EditText
         android:id="@+id/tvParamValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         android:layout_marginStart="12dp" />
 </LinearLayout>

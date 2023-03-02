@@ -8,6 +8,7 @@ import androidx.core.view.isVisible
 import com.google.gson.GsonBuilder
 import zk.bnb.android.databinding.ItemApiDemoBinding
 import zk.bnb.android.databinding.ViewApiParamBinding
+import zk.bnb.android.sdk.SupportedAPIs
 import zk.bnb.android.sdk.TaskListener
 import zk.bnb.android.sdk.ZkBnb
 import zk.bnb.android.sdk.models.Account
@@ -44,20 +45,25 @@ class ApiView(context: Context): LinearLayout(context) {
                 }
             }
             SupportedAPIs.GET_ACCOUNT -> {
-                addParam(AccountRequestType::javaClass.name, "name/index/pk")
+                addParam(AccountRequestType::class.java.simpleName, "name/index/pk")
                 addParam("value", "value of name/index/pk")
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
-                    ZkBnb.getAccount(AccountRequestType.valueOf(getParamValue(AccountRequestType::javaClass.name)), getParamValue("value"), object : TaskListener<Account> {
-                        override fun onError(e: Throwable) {
-                           showError(e)
-                        }
+                    try {
+                        ZkBnb.getAccount(AccountRequestType.valueOf(getParamValue(AccountRequestType::class.java.simpleName).uppercase()), getParamValue("value"), object : TaskListener<Account> {
+                            override fun onError(e: Throwable) {
+                                showError(e)
+                            }
 
-                        override fun onSuccess(data: Account) {
-                            showResponse(data)
+                            override fun onSuccess(data: Account) {
+                                showResponse(data)
 
-                        }
-                    })
+                            }
+                        })
+                    } catch (e: Exception) {
+                        showError(e)
+                    }
+
                 }
             }
             else -> {}
