@@ -6,9 +6,8 @@ import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.coroutineScope
 import kotlinx.coroutines.*
-import zk.bnb.android.sdk.models.Account
+import zk.bnb.android.sdk.models.*
 import zk.bnb.android.sdk.models.request.AccountRequestType
-import zk.bnb.android.sdk.models.NetworkStatus
 import zk.bnb.android.sdk.models.request.AssetRequestType
 import zk.bnb.android.sdk.models.request.BlockRequestType
 import zk.bnb.android.sdk.models.request.RequestSendTx
@@ -99,7 +98,7 @@ object ZkBnb {
     fun getAccountPendingTxs(
         accountRequestType: AccountRequestType,
         value: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Transactions>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -115,7 +114,7 @@ object ZkBnb {
         value: String,
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Nfts>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -127,10 +126,26 @@ object ZkBnb {
         }
     }
 
+    fun getAccountTxs(
+        accountRequestType: AccountRequestType,
+        value: String,
+        offset: Int,
+        limit: Int,
+        taskListener: TaskListener<Transactions>
+    ) {
+        launchApiRequest(taskListener) {
+            val account =
+                apiService.getAccountTxs(accountRequestType.name.lowercase(), value, offset, limit)
+            withContext(Dispatchers.Main) {
+                taskListener.onSuccess(account)
+            }
+        }
+    }
+
     fun getAccounts(
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Accounts>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -145,7 +160,7 @@ object ZkBnb {
     fun getAsset(
         assetRequestType: AssetRequestType,
         value: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Asset>
     ) {
         launchApiRequest(taskListener) {
             val account = apiService.getAsset(assetRequestType.name.lowercase(), value)
@@ -158,7 +173,7 @@ object ZkBnb {
     fun getAssets(
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Assets>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -173,7 +188,7 @@ object ZkBnb {
     fun getBlock(
         blockRequestType: BlockRequestType,
         value: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Block>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -187,7 +202,7 @@ object ZkBnb {
     fun getBlockTxs(
         blockRequestType: BlockRequestType,
         value: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Transactions>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -201,7 +216,7 @@ object ZkBnb {
     fun getBlocks(
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Blocks>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -214,7 +229,7 @@ object ZkBnb {
     }
 
     fun getCurrentHeight(
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<CurrentHeight>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -226,7 +241,7 @@ object ZkBnb {
     }
 
     fun getGasAccount(
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<GasAccount>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -240,7 +255,7 @@ object ZkBnb {
     fun getGasFee(
         assetId: Int,
         txType: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<GasFee>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -252,7 +267,7 @@ object ZkBnb {
     }
 
     fun getGasFeeAssets(
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<GasFeeAssets>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -264,7 +279,7 @@ object ZkBnb {
     }
 
     fun getLayer2BasicInfo(
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Layer2BasicInfo>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -277,7 +292,7 @@ object ZkBnb {
 
     fun getMaxOfferId(
         accountIndex: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<MaxOfferId>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -291,7 +306,7 @@ object ZkBnb {
     fun getPendingTransactions(
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Transactions>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -307,7 +322,7 @@ object ZkBnb {
         offset: Int,
         limit: Int,
         fromHash: String?,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Transactions>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -321,7 +336,7 @@ object ZkBnb {
 
     fun getNextNonce(
         accountIndex: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<NextNonce>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -334,7 +349,7 @@ object ZkBnb {
 
     fun search(
         keyword: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Search>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -347,7 +362,7 @@ object ZkBnb {
 
     fun getTransactionByHash(
         hash: String,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<EnrichedTx>
     ) {
         launchApiRequest(taskListener) {
             val account =
@@ -361,7 +376,7 @@ object ZkBnb {
     fun getTransactions(
         offset: Int,
         limit: Int,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<Transactions>
     ) {
         launchApiRequest(taskListener) {
             validateOffsetAndLimit(offset, limit)
@@ -375,7 +390,7 @@ object ZkBnb {
 
     fun sendTransaction(
         requestSendTx: RequestSendTx,
-        taskListener: TaskListener<Account>
+        taskListener: TaskListener<TxHash>
     ) {
         launchApiRequest(taskListener) {
             val account =

@@ -4,8 +4,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
-import zk.bnb.android.sdk.models.Account
-import zk.bnb.android.sdk.models.NetworkStatus
+import zk.bnb.android.sdk.models.*
 import zk.bnb.android.sdk.models.request.RequestSendTx
 
 interface ZkBnbApiService {
@@ -29,7 +28,7 @@ interface ZkBnbApiService {
     suspend fun getAccountPendingTxs(
         @Query("by") by: String,
         @Query("value") value: String
-    ): Account
+    ): Transactions
 
     /*
    Get nfts of a specific account
@@ -40,7 +39,18 @@ interface ZkBnbApiService {
         @Query("value") value: String,
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Nfts
+
+    /*
+    Get transactions of a specific account
+     */
+    @GET("api/v1/accountTxs")
+    suspend fun getAccountTxs(
+        @Query("by") by: String,
+        @Query("value") value: String,
+        @Query("offset") offset: Int,
+        @Query("limit") limit: Int
+    ): Transactions
 
     /*
     Get accounts
@@ -49,7 +59,7 @@ interface ZkBnbApiService {
     suspend fun getAccounts(
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Accounts
 
     /*
     Get asset
@@ -58,7 +68,7 @@ interface ZkBnbApiService {
     suspend fun getAsset(
         @Query("by") by: String,
         @Query("value") value: String
-    ): Account
+    ): Asset
 
     /*
     Get assets
@@ -67,7 +77,7 @@ interface ZkBnbApiService {
     suspend fun getAssets(
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Assets
 
     /*
     Get block by its height or commitment
@@ -76,7 +86,7 @@ interface ZkBnbApiService {
     suspend fun getBlock(
         @Query("by") by: String,
         @Query("value") value: String
-    ): Account
+    ): Block
 
     /*
     Get transactions in a block
@@ -85,7 +95,7 @@ interface ZkBnbApiService {
     suspend fun getBlockTxs(
         @Query("by") by: String,
         @Query("value") value: String
-    ): Account
+    ): Transactions
 
     /*
     Get blocks
@@ -94,19 +104,19 @@ interface ZkBnbApiService {
     suspend fun getBlocks(
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Blocks
 
     /*
     Get current height
     */
     @GET("api/v1/currentHeight")
-    suspend fun getCurrentHeight(): Account
+    suspend fun getCurrentHeight(): CurrentHeight
 
     /*
     Get gas account, who will charge gas fees for transactions
     */
     @GET("api/v1/gasAccount")
-    suspend fun getGasAccount(): Account
+    suspend fun getGasAccount(): GasAccount
 
     /*
     Get gas fee amount for using a specific asset as gas asset
@@ -115,25 +125,25 @@ interface ZkBnbApiService {
     suspend fun getGasFee(
         @Query("asset_id") assetId: Int,
         @Query("tx_type") txType: Int
-    ): Account
+    ): GasFee
 
     /*
     Get gas fee amount for using a specific asset as gas asset
     */
     @GET("api/v1/gasFeeAssets")
-    suspend fun getGasFeeAssets(): Account
+    suspend fun getGasFeeAssets(): GasFeeAssets
 
     /*
     Get zkbnb general info, including contract address, and count of transactions and active users
     */
     @GET("api/v1/layer2BasicInfo")
-    suspend fun getLayer2BasicInfo(): Account
+    suspend fun getLayer2BasicInfo(): Layer2BasicInfo
 
     /*
     Get zkbnb general info, including contract address, and count of transactions and active users
     */
     @GET("api/v1/maxOfferId")
-    suspend fun getMaxOfferId(@Query("account_index") accountIndex: Int): Account
+    suspend fun getMaxOfferId(@Query("account_index") accountIndex: Int): MaxOfferId
 
     /*
     Get pending transactions
@@ -142,7 +152,7 @@ interface ZkBnbApiService {
     suspend fun getPendingTransactions(
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Transactions
 
     /*
     Get executed transactions
@@ -152,7 +162,7 @@ interface ZkBnbApiService {
         @Query("offset") offset: Int,
         @Query("limit") limit: Int,
         @Query("from_hash") fromHash: String?
-    ): Account
+    ): Transactions
 
     /*
     Get next nonce
@@ -160,7 +170,7 @@ interface ZkBnbApiService {
     @GET("api/v1/nextNonce")
     suspend fun getNextNonce(
         @Query("account_index") accountIndex: Int
-    ): Account
+    ): NextNonce
 
     /*
     Search with a specific keyword
@@ -168,7 +178,7 @@ interface ZkBnbApiService {
     @GET("api/v1/search")
     suspend fun search(
         @Query("keyword") keyword: String
-    ): Account
+    ): Search
 
     /*
     Search with a specific keyword
@@ -176,7 +186,7 @@ interface ZkBnbApiService {
     @GET("api/v1/tx")
     suspend fun getTransaction(
         @Query("hash") hash: String
-    ): Account
+    ): EnrichedTx
 
     /*
     Get executed transactions
@@ -185,7 +195,7 @@ interface ZkBnbApiService {
     suspend fun getTransactions(
         @Query("offset") offset: Int,
         @Query("limit") limit: Int
-    ): Account
+    ): Transactions
 
     /*
     Get executed transactions
@@ -193,5 +203,5 @@ interface ZkBnbApiService {
     @POST("api/v1/sendTx")
     suspend fun sendTransaction(
         @Body requestSendTx: RequestSendTx,
-    ): Account
+    ): TxHash
 }
