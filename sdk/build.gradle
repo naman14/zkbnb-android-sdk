@@ -1,7 +1,10 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.dokka' version '1.7.20'
 }
+
+import org.jetbrains.dokka.gradle.DokkaTask
 
 android {
     namespace 'zk.bnb.android.sdk'
@@ -48,4 +51,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+tasks.withType(DokkaTask.class) {
+    moduleName.set("zkbnb-android-sdk")
+    failOnWarning.set(false)
+    suppressObviousFunctions.set(true)
+    suppressInheritedMembers.set(false)
+    offlineMode.set(false)
 }

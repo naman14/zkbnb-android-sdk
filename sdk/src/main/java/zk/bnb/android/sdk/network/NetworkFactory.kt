@@ -6,6 +6,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+/**
+ * Helper class to create network related classes.
+ * Constructs instance of OkhttpClient and Retrofit
+ *
+ * @property networkConfig
+ */
 class NetworkFactory(
     private val networkConfig: NetworkConfig
 ) {

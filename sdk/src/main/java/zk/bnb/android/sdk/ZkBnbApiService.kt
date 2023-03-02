@@ -7,6 +7,10 @@ import retrofit2.http.Query
 import zk.bnb.android.sdk.models.*
 import zk.bnb.android.sdk.models.request.RequestSendTx
 
+/**
+ * Retrofit API interface for all zkbnb http APIs
+ *
+ */
 interface ZkBnbApiService {
 
     /*

@@ -1,5 +1,10 @@
 package zk.bnb.android.sdk
 
+/**
+ * Lists all APIs supported by the sdk
+ *
+ * @property desc description of API
+ */
 enum class SupportedAPIs(val desc: String) {
     GET_NETWORK_STATUS("Get status of zkbnb"),
     GET_ACCOUNT("Get account by account's name, index or pk"),

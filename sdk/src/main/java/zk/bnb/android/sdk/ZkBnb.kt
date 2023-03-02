@@ -14,6 +14,9 @@ import zk.bnb.android.sdk.models.request.RequestSendTx
 import zk.bnb.android.sdk.network.NetworkConfig
 import zk.bnb.android.sdk.network.NetworkFactory
 
+/**
+ * Singleton class to interact with zkbnb sdk.
+ */
 @SuppressLint("StaticFieldLeak")
 object ZkBnb {
 
@@ -24,8 +27,11 @@ object ZkBnb {
 
     private lateinit var apiService: ZkBnbApiService
 
-    /*
-    provide a initialisation context needed to setup sdk
+    /**
+     * initialise the zkbnb sdk. Should be called once at app start
+     *
+     * @param context application context
+     * @param networkConfig Network configuration used in sdk setup
      */
     fun init(context: Context, networkConfig: NetworkConfig) {
         // using application context only for global initialisation to avoid any context leaks
@@ -38,20 +44,32 @@ object ZkBnb {
         setup(networkConfig)
     }
 
-    private fun setup(networkConfig: NetworkConfig) {
-        val retrofit = NetworkFactory(networkConfig).retrofitApi
-        apiService = retrofit.create(ZkBnbApiService::class.java)
-    }
-
-    /*
-    attach a lifecycle if required. If lifecycle is attached, then all sdk calls will follow
-    the underlying lifecycle events. (e.g. if activity lifecycle owner provided, then any pending
-    network request will be cancelled as soon as the activity is destroyed)
+    /**
+     * Attach a lifecycle. If lifecycle is attached, then all sdk api calls will follow
+     * the underlying lifecycle events. (e.g. if activity lifecycle owner provided, then any pending
+     * network request will be cancelled as soon as the activity is destroyed)
+     *
+     * attaching a lifecycle is not required but highly recommended. If lifecycle is not attached, then
+     * api calls will follow application wide lifecycle events
+     *
+     * @param lifecycle
      */
     fun attach(lifecycle: Lifecycle) {
         this.lifecycle = lifecycle
     }
 
+    private fun setup(networkConfig: NetworkConfig) {
+        val retrofit = NetworkFactory(networkConfig).retrofitApi
+        apiService = retrofit.create(ZkBnbApiService::class.java)
+    }
+
+
+    /**
+     * get the relevant lifecycle scope. If lifecycle is attached, then use the lifecycle provided
+     * else use GlobalScope application wide lifecycle
+     *
+     * @return lifecycleScope to be used in api calls
+     */
     @OptIn(DelicateCoroutinesApi::class)
     private fun lifecycleScope(): CoroutineScope {
         if (lifecycle != null) {
@@ -73,6 +91,11 @@ object ZkBnb {
         }
     }
 
+    /**
+     * get network status of zkbnb
+     *
+     * @param taskListener
+     */
     fun getNetworkStatus(taskListener: TaskListener<NetworkStatus>) {
         launchApiRequest(taskListener) {
             val status = apiService.status()
@@ -82,6 +105,14 @@ object ZkBnb {
         }
     }
 
+    /**
+     * Get account by account's name, index or pk
+     *
+     * @param accountRequestType accountRequestType, must be one of AccountRequestType.NAME, AccountRequestType.Index
+     * or AccountRequestType.PK
+     * @param value value of the account request type
+     * @param taskListener
+     */
     fun getAccount(
         accountRequestType: AccountRequestType,
         value: String,
@@ -95,6 +126,14 @@ object ZkBnb {
         }
     }
 
+    /**
+     * Get pending transactions of a specific account
+     *
+     * @param accountRequestType accountRequestType, must be one of AccountRequestType.NAME, AccountRequestType.Index
+     * or AccountRequestType.PK
+     * @param value value of the account request type
+     * @param taskListener
+     */
     fun getAccountPendingTxs(
         accountRequestType: AccountRequestType,
         value: String,
