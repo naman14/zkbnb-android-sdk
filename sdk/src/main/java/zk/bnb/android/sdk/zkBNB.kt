@@ -18,14 +18,14 @@ import zk.bnb.android.sdk.network.NetworkFactory
  * Singleton class to interact with zkbnb sdk.
  */
 @SuppressLint("StaticFieldLeak")
-object ZkBnb {
+object zkBNB {
 
     private const val TAG = "ZkBnb"
 
     private lateinit var appContext: Context
     private var lifecycle: Lifecycle? = null
 
-    private lateinit var apiService: ZkBnbApiService
+    private lateinit var apiService: zkBNBApiService
 
     /**
      * initialise the zkbnb sdk. Should be called once at app start
@@ -60,7 +60,7 @@ object ZkBnb {
 
     private fun setup(networkConfig: NetworkConfig) {
         val retrofit = NetworkFactory(networkConfig).retrofitApi
-        apiService = retrofit.create(ZkBnbApiService::class.java)
+        apiService = retrofit.create(zkBNBApiService::class.java)
     }
 
 

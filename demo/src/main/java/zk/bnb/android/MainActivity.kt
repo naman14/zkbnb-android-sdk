@@ -8,7 +8,7 @@ import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import zk.bnb.android.databinding.ActivityMainBinding
 import zk.bnb.android.sdk.SupportedAPIs
-import zk.bnb.android.sdk.ZkBnb
+import zk.bnb.android.sdk.zkBNB
 import zk.bnb.android.sdk.network.NetworkConfig
 
 class MainActivity : AppCompatActivity() {
@@ -59,13 +59,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initZkBnb(baseUrl: String) {
-        ZkBnb.init(
+        zkBNB.init(
             applicationContext, NetworkConfig(
                 baseApiUrl = baseUrl,
                 isDebug = true
             )
         )
-        ZkBnb.attach(lifecycle)
+        zkBNB.attach(lifecycle)
     }
 
     private fun showApis(filter: String = "") {

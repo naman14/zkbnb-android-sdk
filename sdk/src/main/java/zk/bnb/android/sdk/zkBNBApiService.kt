@@ -11,7 +11,7 @@ import zk.bnb.android.sdk.models.request.RequestSendTx
  * Retrofit API interface for all zkbnb http APIs
  *
  */
-interface ZkBnbApiService {
+interface zkBNBApiService {
 
     /*
     Get status of zkbnb
