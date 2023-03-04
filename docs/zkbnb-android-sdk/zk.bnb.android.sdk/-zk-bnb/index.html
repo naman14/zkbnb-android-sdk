@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ZkBnb</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>zkbnb-android-sdk</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="zkbnb-android-sdk::zk.bnb.android.sdk/ZkBnb///PointingToDeclaration//165651098">
+  <div class="breadcrumbs"><a href="../../../index.html">zkbnb-android-sdk</a><span class="delimiter">/</span><a href="../index.html">zk.bnb.android.sdk</a><span class="delimiter">/</span><span class="current">ZkBnb</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Zk</span><wbr></wbr><span><span>Bnb</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ZkBnb</a></div><p class="paragraph">Singleton class to interact with zkbnb sdk.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="804588548%2FFunctions%2F165651098" anchor-label="attach" id="804588548%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="attach.html"><span><span>attach</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="804588548%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="attach.html"><span class="token function">attach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lifecycle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/lifecycle/Lifecycle.html">Lifecycle</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Attach a lifecycle. If lifecycle is attached, then all sdk api calls will follow the underlying lifecycle events. (e.g. if activity lifecycle owner provided, then any pending network request will be cancelled as soon as the activity is destroyed)</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-813390760%2FFunctions%2F165651098" anchor-label="getAccount" id="-813390760%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account.html"><span>get</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-813390760%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-account.html"><span class="token function">getAccount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-account-request-type/index.html">AccountRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-account/index.html">Account</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Get account by account's name, index or pk</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1254690243%2FFunctions%2F165651098" anchor-label="getAccountNfts" id="-1254690243%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-nfts.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span><span>Nfts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1254690243%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-account-nfts.html"><span class="token function">getAccountNfts</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-account-request-type/index.html">AccountRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-nfts/index.html">Nfts</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1955519930%2FFunctions%2F165651098" anchor-label="getAccountPendingTxs" id="1955519930%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-pending-txs.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1955519930%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-account-pending-txs.html"><span class="token function">getAccountPendingTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-account-request-type/index.html">AccountRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Get pending transactions of a specific account</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1218571987%2FFunctions%2F165651098" anchor-label="getAccounts" id="-1218571987%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-accounts.html"><span>get</span><wbr></wbr><span><span>Accounts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1218571987%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-accounts.html"><span class="token function">getAccounts</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-accounts/index.html">Accounts</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2066451401%2FFunctions%2F165651098" anchor-label="getAccountTxs" id="-2066451401%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-txs.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2066451401%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-account-txs.html"><span class="token function">getAccountTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-account-request-type/index.html">AccountRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-775170053%2FFunctions%2F165651098" anchor-label="getAsset" id="-775170053%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-asset.html"><span>get</span><wbr></wbr><span><span>Asset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775170053%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-asset.html"><span class="token function">getAsset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">assetRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-asset-request-type/index.html">AssetRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-asset/index.html">Asset</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="611248359%2FFunctions%2F165651098" anchor-label="getAssets" id="611248359%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-assets.html"><span>get</span><wbr></wbr><span><span>Assets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="611248359%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-assets.html"><span class="token function">getAssets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-assets/index.html">Assets</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2007796216%2FFunctions%2F165651098" anchor-label="getBlock" id="2007796216%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-block.html"><span>get</span><wbr></wbr><span><span>Block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2007796216%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-block.html"><span class="token function">getBlock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blockRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-block-request-type/index.html">BlockRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-block/index.html">Block</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="158448109%2FFunctions%2F165651098" anchor-label="getBlocks" id="158448109%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-blocks.html"><span>get</span><wbr></wbr><span><span>Blocks</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="158448109%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-blocks.html"><span class="token function">getBlocks</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-blocks/index.html">Blocks</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-349871145%2FFunctions%2F165651098" anchor-label="getBlockTxs" id="-349871145%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-block-txs.html"><span>get</span><wbr></wbr><span>Block</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-349871145%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-block-txs.html"><span class="token function">getBlockTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blockRequestType<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-block-request-type/index.html">BlockRequestType</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-791243411%2FFunctions%2F165651098" anchor-label="getCurrentHeight" id="-791243411%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-current-height.html"><span>get</span><wbr></wbr><span>Current</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-791243411%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-current-height.html"><span class="token function">getCurrentHeight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-current-height/index.html">CurrentHeight</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="623412326%2FFunctions%2F165651098" anchor-label="getExecutedTransactions" id="623412326%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-executed-transactions.html"><span>get</span><wbr></wbr><span>Executed</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="623412326%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-executed-transactions.html"><span class="token function">getExecutedTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">fromHash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-704281111%2FFunctions%2F165651098" anchor-label="getGasAccount" id="-704281111%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-account.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-704281111%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-gas-account.html"><span class="token function">getGasAccount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-gas-account/index.html">GasAccount</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="106441659%2FFunctions%2F165651098" anchor-label="getGasFee" id="106441659%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-fee.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="106441659%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-gas-fee.html"><span class="token function">getGasFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">assetId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">txType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-gas-fee/index.html">GasFee</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1309937249%2FFunctions%2F165651098" anchor-label="getGasFeeAssets" id="1309937249%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-fee-assets.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span>Fee</span><wbr></wbr><span><span>Assets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1309937249%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-gas-fee-assets.html"><span class="token function">getGasFeeAssets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-gas-fee-assets/index.html">GasFeeAssets</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="929635213%2FFunctions%2F165651098" anchor-label="getLayer2BasicInfo" id="929635213%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-layer2-basic-info.html"><span>get</span><wbr></wbr><span>Layer2Basic</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="929635213%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-layer2-basic-info.html"><span class="token function">getLayer2BasicInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-layer2-basic-info/index.html">Layer2BasicInfo</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1935078932%2FFunctions%2F165651098" anchor-label="getMaxOfferId" id="1935078932%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-max-offer-id.html"><span>get</span><wbr></wbr><span>Max</span><wbr></wbr><span>Offer</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1935078932%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-max-offer-id.html"><span class="token function">getMaxOfferId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-max-offer-id/index.html">MaxOfferId</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2120764781%2FFunctions%2F165651098" anchor-label="getNetworkStatus" id="2120764781%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-network-status.html"><span>get</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2120764781%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-network-status.html"><span class="token function">getNetworkStatus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-network-status/index.html">NetworkStatus</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">get network status of zkbnb</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="383273094%2FFunctions%2F165651098" anchor-label="getNextNonce" id="383273094%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-next-nonce.html"><span>get</span><wbr></wbr><span>Next</span><wbr></wbr><span><span>Nonce</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383273094%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-next-nonce.html"><span class="token function">getNextNonce</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-next-nonce/index.html">NextNonce</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1173502044%2FFunctions%2F165651098" anchor-label="getPendingTransactions" id="1173502044%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-pending-transactions.html"><span>get</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1173502044%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-pending-transactions.html"><span class="token function">getPendingTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1532743627%2FFunctions%2F165651098" anchor-label="getTransactionByHash" id="1532743627%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-transaction-by-hash.html"><span>get</span><wbr></wbr><span>Transaction</span><wbr></wbr><span>By</span><wbr></wbr><span><span>Hash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1532743627%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-transaction-by-hash.html"><span class="token function">getTransactionByHash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-enriched-tx/index.html">EnrichedTx</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-370064693%2FFunctions%2F165651098" anchor-label="getTransactions" id="-370064693%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-transactions.html"><span>get</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-370064693%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-transactions.html"><span class="token function">getTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="927335914%2FFunctions%2F165651098" anchor-label="init" id="927335914%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927335914%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">networkConfig<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.network/-network-config/index.html">NetworkConfig</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">initialise the zkbnb sdk. Should be called once at app start</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="758626566%2FFunctions%2F165651098" anchor-label="search" id="758626566%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="search.html"><span><span>search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="758626566%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="search.html"><span class="token function">search</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">keyword<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-search/index.html">Search</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1358842230%2FFunctions%2F165651098" anchor-label="sendTransaction" id="1358842230%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="send-transaction.html"><span>send</span><wbr></wbr><span><span>Transaction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1358842230%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="send-transaction.html"><span class="token function">sendTransaction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestSendTx<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-request-send-tx/index.html">RequestSendTx</a><span class="token punctuation">, </span></span><span class="parameter ">taskListener<span class="token operator">: </span><a href="../-task-listener/index.html">TaskListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../zk.bnb.android.sdk.models/-tx-hash/index.html">TxHash</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
