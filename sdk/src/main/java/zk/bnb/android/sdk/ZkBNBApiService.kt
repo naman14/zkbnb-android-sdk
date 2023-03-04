@@ -132,7 +132,7 @@ interface ZkBNBApiService {
     ): GasFee
 
     /*
-    Get gas fee amount for using a specific asset as gas asset
+    Get supported gas fee assets
     */
     @GET("api/v1/gasFeeAssets")
     suspend fun getGasFeeAssets(): GasFeeAssets
@@ -144,7 +144,7 @@ interface ZkBNBApiService {
     suspend fun getLayer2BasicInfo(): Layer2BasicInfo
 
     /*
-    Get zkbnb general info, including contract address, and count of transactions and active users
+    Get max nft offer id for a specific account
     */
     @GET("api/v1/maxOfferId")
     suspend fun getMaxOfferId(@Query("account_index") accountIndex: Int): MaxOfferId
@@ -185,7 +185,7 @@ interface ZkBNBApiService {
     ): Search
 
     /*
-    Search with a specific keyword
+    Get transaction by hash
     */
     @GET("api/v1/tx")
     suspend fun getTransaction(

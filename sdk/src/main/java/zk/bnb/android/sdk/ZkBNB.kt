@@ -80,6 +80,14 @@ object ZkBNB {
         }
     }
 
+    /**
+     * launch internal api request. gets the correct lifecyclescope and attaches a CoroutineExceptionHandler
+     * to handle exceptions and notify attached TaskListener
+     *
+     * @param T
+     * @param taskListener
+     * @param handler
+     */
     private fun <T> launchApiRequest(taskListener: TaskListener<T>, handler: suspend () -> Unit) {
         lifecycleScope().launch(Dispatchers.IO + CoroutineExceptionHandler { context, throwable ->
             lifecycleScope().launch(Dispatchers.Main) {
@@ -148,6 +156,15 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get nfts of a specific account
+     *
+     * @param accountRequestType
+     * @param value
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getAccountNfts(
         accountRequestType: AccountRequestType,
         value: String,
@@ -165,6 +182,15 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get transactions of a specific account
+     *
+     * @param accountRequestType
+     * @param value
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getAccountTxs(
         accountRequestType: AccountRequestType,
         value: String,
@@ -181,6 +207,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get accounts
+     *
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getAccounts(
         offset: Int,
         limit: Int,
@@ -196,6 +229,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get asset
+     *
+     * @param assetRequestType
+     * @param value
+     * @param taskListener
+     */
     fun getAsset(
         assetRequestType: AssetRequestType,
         value: String,
@@ -209,6 +249,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get assets
+     *
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getAssets(
         offset: Int,
         limit: Int,
@@ -224,6 +271,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get block by its height or commitment
+     *
+     * @param blockRequestType
+     * @param value
+     * @param taskListener
+     */
     fun getBlock(
         blockRequestType: BlockRequestType,
         value: String,
@@ -238,6 +292,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     *  Get transactions in a block
+     *
+     * @param blockRequestType
+     * @param value
+     * @param taskListener
+     */
     fun getBlockTxs(
         blockRequestType: BlockRequestType,
         value: String,
@@ -252,6 +313,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get blocks
+     *
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getBlocks(
         offset: Int,
         limit: Int,
@@ -267,6 +335,11 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get current height
+     *
+     * @param taskListener
+     */
     fun getCurrentHeight(
         taskListener: TaskListener<CurrentHeight>
     ) {
@@ -279,6 +352,11 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get gas account, who will charge gas fees for transactions
+     *
+     * @param taskListener
+     */
     fun getGasAccount(
         taskListener: TaskListener<GasAccount>
     ) {
@@ -291,6 +369,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get gas fee amount for using a specific asset as gas asset
+     *
+     * @param assetId
+     * @param txType
+     * @param taskListener
+     */
     fun getGasFee(
         assetId: Int,
         txType: Int,
@@ -305,6 +390,11 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get supported gas fee assets
+     *
+     * @param taskListener
+     */
     fun getGasFeeAssets(
         taskListener: TaskListener<GasFeeAssets>
     ) {
@@ -317,6 +407,11 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get zkbnb general info, including contract address, and count of transactions and active users
+     *
+     * @param taskListener
+     */
     fun getLayer2BasicInfo(
         taskListener: TaskListener<Layer2BasicInfo>
     ) {
@@ -329,6 +424,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get max nft offer id for a specific account
+     *
+     * @param accountIndex
+     * @param taskListener
+     */
     fun getMaxOfferId(
         accountIndex: Int,
         taskListener: TaskListener<MaxOfferId>
@@ -342,6 +443,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get pending transactions
+     *
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getPendingTransactions(
         offset: Int,
         limit: Int,
@@ -357,6 +465,14 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get executed transactions
+     *
+     * @param offset
+     * @param limit
+     * @param fromHash
+     * @param taskListener
+     */
     fun getExecutedTransactions(
         offset: Int,
         limit: Int,
@@ -373,6 +489,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get next nonce
+     *
+     * @param accountIndex
+     * @param taskListener
+     */
     fun getNextNonce(
         accountIndex: Int,
         taskListener: TaskListener<NextNonce>
@@ -386,6 +508,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     *  Search with a specific keyword
+     *
+     * @param keyword
+     * @param taskListener
+     */
     fun search(
         keyword: String,
         taskListener: TaskListener<Search>
@@ -399,6 +527,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get transaction by hash
+     *
+     * @param hash
+     * @param taskListener
+     */
     fun getTransactionByHash(
         hash: String,
         taskListener: TaskListener<EnrichedTx>
@@ -412,6 +546,13 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Get transactions
+     *
+     * @param offset
+     * @param limit
+     * @param taskListener
+     */
     fun getTransactions(
         offset: Int,
         limit: Int,
@@ -427,6 +568,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     * Send raw transaction
+     *
+     * @param requestSendTx
+     * @param taskListener
+     */
     fun sendTransaction(
         requestSendTx: RequestSendTx,
         taskListener: TaskListener<TxHash>
@@ -440,6 +587,12 @@ object ZkBNB {
         }
     }
 
+    /**
+     * validate offset and limit values are within range
+     *
+     * @param offset
+     * @param limit
+     */
     private fun validateOffsetAndLimit(offset: Int, limit: Int) {
         if (offset < 0 || offset > 100000) {
             throw IllegalArgumentException("Invalid offset value, offset should be between 0 and 100000")
