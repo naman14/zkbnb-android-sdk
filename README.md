@@ -83,6 +83,8 @@ https://naman14.github.io/zkbnb-android-sdk/zkbnb-android-sdk/zk.bnb.android.sdk
 
 ## Demo
 
+![image info](https://raw.githubusercontent.com/naman14/zkbnb-android-sdk/main/demo/demo_screenshot.png)
+
 A full featured demo is also included in the source code https://github.com/naman14/zkbnb-android-sdk/tree/main/demo
 
 Demo APK can also be directly downloaded from here
