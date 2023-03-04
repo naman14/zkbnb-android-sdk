@@ -10,7 +10,7 @@ import zk.bnb.android.databinding.ItemApiDemoBinding
 import zk.bnb.android.databinding.ViewApiParamBinding
 import zk.bnb.android.sdk.SupportedAPIs
 import zk.bnb.android.sdk.TaskListener
-import zk.bnb.android.sdk.zkBNB
+import zk.bnb.android.sdk.ZkBNB
 import zk.bnb.android.sdk.models.*
 import zk.bnb.android.sdk.models.request.AccountRequestType
 import zk.bnb.android.sdk.models.request.AssetRequestType
@@ -35,7 +35,7 @@ class ApiView(context: Context) : LinearLayout(context) {
             SupportedAPIs.GET_NETWORK_STATUS -> {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
-                    zkBNB.getNetworkStatus(object : TaskListener<NetworkStatus> {
+                    ZkBNB.getNetworkStatus(object : TaskListener<NetworkStatus> {
                         override fun onError(e: Throwable) {
                             showError(e)
                         }
@@ -52,7 +52,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAccount(
+                        ZkBNB.getAccount(
                             AccountRequestType.valueOf(getParamValue(AccountRequestType::class.java.simpleName).uppercase()),
                             getParamValue("value"),
                             object : TaskListener<Account> {
@@ -76,7 +76,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAccountPendingTxs(AccountRequestType.valueOf(
+                        ZkBNB.getAccountPendingTxs(AccountRequestType.valueOf(
                             getParamValue(
                                 AccountRequestType::class.java.simpleName
                             ).uppercase()
@@ -104,7 +104,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAccountNfts(AccountRequestType.valueOf(
+                        ZkBNB.getAccountNfts(AccountRequestType.valueOf(
                             getParamValue(
                                 AccountRequestType::class.java.simpleName
                             ).uppercase()
@@ -135,7 +135,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAccountTxs(AccountRequestType.valueOf(
+                        ZkBNB.getAccountTxs(AccountRequestType.valueOf(
                             getParamValue(
                                 AccountRequestType::class.java.simpleName
                             ).uppercase()
@@ -164,7 +164,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAccounts(
+                        ZkBNB.getAccounts(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             object : TaskListener<Accounts> {
@@ -188,7 +188,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAsset(
+                        ZkBNB.getAsset(
                             AssetRequestType.valueOf(getParamValue(AssetRequestType::class.java.simpleName).uppercase()),
                             getParamValue("value"),
                             object : TaskListener<Asset> {
@@ -212,7 +212,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getAssets(
+                        ZkBNB.getAssets(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             object : TaskListener<Assets> {
@@ -236,7 +236,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getBlock(
+                        ZkBNB.getBlock(
                             BlockRequestType.valueOf(getParamValue(BlockRequestType::class.java.simpleName).uppercase()),
                             getParamValue("value"),
                             object : TaskListener<Block> {
@@ -260,7 +260,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getBlockTxs(
+                        ZkBNB.getBlockTxs(
                             BlockRequestType.valueOf(getParamValue(BlockRequestType::class.java.simpleName).uppercase()),
                             getParamValue("value"),
                             object : TaskListener<Transactions> {
@@ -284,7 +284,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getBlocks(
+                        ZkBNB.getBlocks(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             object : TaskListener<Blocks> {
@@ -306,7 +306,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getCurrentHeight(
+                        ZkBNB.getCurrentHeight(
                             object : TaskListener<CurrentHeight> {
                                 override fun onError(e: Throwable) {
                                     showError(e)
@@ -326,7 +326,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getGasAccount(
+                        ZkBNB.getGasAccount(
                             object : TaskListener<GasAccount> {
                                 override fun onError(e: Throwable) {
                                     showError(e)
@@ -348,7 +348,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getGasFee(
+                        ZkBNB.getGasFee(
                             getParamValue("assetId").toInt(),
                             getParamValue("txType").toInt(),
                             object : TaskListener<GasFee> {
@@ -370,7 +370,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getGasFeeAssets(
+                        ZkBNB.getGasFeeAssets(
                             object : TaskListener<GasFeeAssets> {
                                 override fun onError(e: Throwable) {
                                     showError(e)
@@ -390,7 +390,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getLayer2BasicInfo(
+                        ZkBNB.getLayer2BasicInfo(
                             object : TaskListener<Layer2BasicInfo> {
                                 override fun onError(e: Throwable) {
                                     showError(e)
@@ -411,7 +411,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getMaxOfferId(
+                        ZkBNB.getMaxOfferId(
                             getParamValue("accountIndex").toInt(),
                             object : TaskListener<MaxOfferId> {
                                 override fun onError(e: Throwable) {
@@ -434,7 +434,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getPendingTransactions(
+                        ZkBNB.getPendingTransactions(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             object : TaskListener<Transactions> {
@@ -459,7 +459,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getExecutedTransactions(
+                        ZkBNB.getExecutedTransactions(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             getParamValue("fromHash").ifEmpty { null },
@@ -483,7 +483,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getNextNonce(
+                        ZkBNB.getNextNonce(
                             getParamValue("accountIndex").toInt(),
                             object : TaskListener<NextNonce> {
                                 override fun onError(e: Throwable) {
@@ -505,7 +505,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.search(
+                        ZkBNB.search(
                             getParamValue("keyword"),
                             object : TaskListener<Search> {
                                 override fun onError(e: Throwable) {
@@ -527,7 +527,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getTransactionByHash(
+                        ZkBNB.getTransactionByHash(
                             getParamValue("hash"),
                             object : TaskListener<EnrichedTx> {
                                 override fun onError(e: Throwable) {
@@ -550,7 +550,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.getTransactions(
+                        ZkBNB.getTransactions(
                             getParamValue("offset").toInt(),
                             getParamValue("limit").toInt(),
                             object : TaskListener<Transactions> {
@@ -574,7 +574,7 @@ class ApiView(context: Context) : LinearLayout(context) {
                 binding.btnExecute.setOnClickListener {
                     binding.progressBar.isVisible = true
                     try {
-                        zkBNB.sendTransaction(
+                        ZkBNB.sendTransaction(
                             RequestSendTx(
                                 getParamValue("txType").toInt(),
                                 getParamValue("txInfo")
