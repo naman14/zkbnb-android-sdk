@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ZkBnbApiService</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>zkbnb-android-sdk</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="zkbnb-android-sdk::zk.bnb.android.sdk/ZkBnbApiService///PointingToDeclaration//165651098">
+  <div class="breadcrumbs"><a href="../../../index.html">zkbnb-android-sdk</a><span class="delimiter">/</span><a href="../index.html">zk.bnb.android.sdk</a><span class="delimiter">/</span><span class="current">ZkBnbApiService</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Zk</span><wbr></wbr><span>Bnb</span><wbr></wbr><span>Api</span><wbr></wbr><span><span>Service</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ZkBnbApiService</a></div><p class="paragraph">Retrofit API interface for all zkbnb http APIs</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1227151835%2FFunctions%2F165651098" anchor-label="getAccount" id="1227151835%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account.html"><span>get</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1227151835%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/account&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-account.html"><span class="token function">getAccount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-account/index.html">Account</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1359204754%2FFunctions%2F165651098" anchor-label="getAccountNfts" id="1359204754%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-nfts.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span><span>Nfts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1359204754%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/accountNfts&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-account-nfts.html"><span class="token function">getAccountNfts</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-nfts/index.html">Nfts</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-464471917%2FFunctions%2F165651098" anchor-label="getAccountPendingTxs" id="-464471917%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-pending-txs.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-464471917%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/accountPendingTxs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-account-pending-txs.html"><span class="token function">getAccountPendingTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="890188390%2FFunctions%2F165651098" anchor-label="getAccounts" id="890188390%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-accounts.html"><span>get</span><wbr></wbr><span><span>Accounts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="890188390%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/accounts&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-accounts.html"><span class="token function">getAccounts</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-accounts/index.html">Accounts</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-169652852%2FFunctions%2F165651098" anchor-label="getAccountTxs" id="-169652852%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-account-txs.html"><span>get</span><wbr></wbr><span>Account</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169652852%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/accountTxs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-account-txs.html"><span class="token function">getAccountTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="555863966%2FFunctions%2F165651098" anchor-label="getAsset" id="555863966%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-asset.html"><span>get</span><wbr></wbr><span><span>Asset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="555863966%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/asset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-asset.html"><span class="token function">getAsset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-asset/index.html">Asset</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1620414781%2FFunctions%2F165651098" anchor-label="getAssets" id="-1620414781%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-assets.html"><span>get</span><wbr></wbr><span><span>Assets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1620414781%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/assets&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-assets.html"><span class="token function">getAssets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-assets/index.html">Assets</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1839269051%2FFunctions%2F165651098" anchor-label="getBlock" id="1839269051%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-block.html"><span>get</span><wbr></wbr><span><span>Block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1839269051%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/block&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-block.html"><span class="token function">getBlock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-block/index.html">Block</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="647740294%2FFunctions%2F165651098" anchor-label="getBlocks" id="647740294%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-blocks.html"><span>get</span><wbr></wbr><span><span>Blocks</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="647740294%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/blocks&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-blocks.html"><span class="token function">getBlocks</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-blocks/index.html">Blocks</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-934130740%2FFunctions%2F165651098" anchor-label="getBlockTxs" id="-934130740%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-block-txs.html"><span>get</span><wbr></wbr><span>Block</span><wbr></wbr><span><span>Txs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-934130740%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/blockTxs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-block-txs.html"><span class="token function">getBlockTxs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;by&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>by<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;value&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1070144677%2FFunctions%2F165651098" anchor-label="getCurrentHeight" id="-1070144677%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-current-height.html"><span>get</span><wbr></wbr><span>Current</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1070144677%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/currentHeight&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-current-height.html"><span class="token function">getCurrentHeight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-current-height/index.html">CurrentHeight</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1164365466%2FFunctions%2F165651098" anchor-label="getExecutedTransactions" id="1164365466%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-executed-transactions.html"><span>get</span><wbr></wbr><span>Executed</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1164365466%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/executedTxs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-executed-transactions.html"><span class="token function">getExecutedTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;from_hash&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>fromHash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1672379979%2FFunctions%2F165651098" anchor-label="getGasAccount" id="1672379979%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-account.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1672379979%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/gasAccount&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-gas-account.html"><span class="token function">getGasAccount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-gas-account/index.html">GasAccount</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="830389165%2FFunctions%2F165651098" anchor-label="getGasFee" id="830389165%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-fee.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="830389165%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/gasFee&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-gas-fee.html"><span class="token function">getGasFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;asset_id&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>assetId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;tx_type&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>txType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-gas-fee/index.html">GasFee</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1133478543%2FFunctions%2F165651098" anchor-label="getGasFeeAssets" id="1133478543%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-gas-fee-assets.html"><span>get</span><wbr></wbr><span>Gas</span><wbr></wbr><span>Fee</span><wbr></wbr><span><span>Assets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1133478543%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/gasFeeAssets&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-gas-fee-assets.html"><span class="token function">getGasFeeAssets</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-gas-fee-assets/index.html">GasFeeAssets</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1061670464%2FFunctions%2F165651098" anchor-label="getLayer2BasicInfo" id="1061670464%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-layer2-basic-info.html"><span>get</span><wbr></wbr><span>Layer2Basic</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1061670464%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/layer2BasicInfo&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-layer2-basic-info.html"><span class="token function">getLayer2BasicInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-layer2-basic-info/index.html">Layer2BasicInfo</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="602387530%2FFunctions%2F165651098" anchor-label="getMaxOfferId" id="602387530%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-max-offer-id.html"><span>get</span><wbr></wbr><span>Max</span><wbr></wbr><span>Offer</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602387530%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/maxOfferId&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-max-offer-id.html"><span class="token function">getMaxOfferId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;account_index&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>accountIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-max-offer-id/index.html">MaxOfferId</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="709340157%2FFunctions%2F165651098" anchor-label="getNextNonce" id="709340157%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-next-nonce.html"><span>get</span><wbr></wbr><span>Next</span><wbr></wbr><span><span>Nonce</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="709340157%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/nextNonce&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-next-nonce.html"><span class="token function">getNextNonce</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;account_index&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>accountIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-next-nonce/index.html">NextNonce</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="623456912%2FFunctions%2F165651098" anchor-label="getPendingTransactions" id="623456912%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-pending-transactions.html"><span>get</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="623456912%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/pendingTxs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-pending-transactions.html"><span class="token function">getPendingTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1469635175%2FFunctions%2F165651098" anchor-label="getTransaction" id="1469635175%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-transaction.html"><span>get</span><wbr></wbr><span><span>Transaction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1469635175%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/tx&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-transaction.html"><span class="token function">getTransaction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;hash&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-enriched-tx/index.html">EnrichedTx</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1740494485%2FFunctions%2F165651098" anchor-label="getTransactions" id="1740494485%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-transactions.html"><span>get</span><wbr></wbr><span><span>Transactions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1740494485%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/txs&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-transactions.html"><span class="token function">getTransactions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;offset&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;limit&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-transactions/index.html">Transactions</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-24445337%2FFunctions%2F165651098" anchor-label="search" id="-24445337%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="search.html"><span><span>search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-24445337%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/search&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="search.html"><span class="token function">search</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Query///PointingToDeclaration/"><span class="token annotation builtin">Query</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;keyword&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>keyword<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-search/index.html">Search</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="391244323%2FFunctions%2F165651098" anchor-label="sendTransaction" id="391244323%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="send-transaction.html"><span>send</span><wbr></wbr><span><span>Transaction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="391244323%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/POST///PointingToDeclaration/"><span class="token annotation builtin">POST</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;api/v1/sendTx&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="send-transaction.html"><span class="token function">sendTransaction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/Body///PointingToDeclaration/"><span class="token annotation builtin">Body</span></span> </span>requestSendTx<span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models.request/-request-send-tx/index.html">RequestSendTx</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-tx-hash/index.html">TxHash</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="399895219%2FFunctions%2F165651098" anchor-label="status" id="399895219%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="status.html"><span><span>status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="399895219%2FFunctions%2F165651098"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="retrofit2.http/GET///PointingToDeclaration/"><span class="token annotation builtin">GET</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;.&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../zk.bnb.android.sdk.models/-network-status/index.html">NetworkStatus</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
