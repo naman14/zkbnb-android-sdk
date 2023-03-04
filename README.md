@@ -83,7 +83,7 @@ https://naman14.github.io/zkbnb-android-sdk/zkbnb-android-sdk/zk.bnb.android.sdk
 
 ## Demo
 
-<img src="https://raw.githubusercontent.com/naman14/zkbnb-android-sdk/main/demo/demo_screenshot.png" width="170">
+<img src="https://raw.githubusercontent.com/naman14/zkbnb-android-sdk/main/demo/demo_screenshot.png" width="230">
 
 A full featured demo is also included in the source code https://github.com/naman14/zkbnb-android-sdk/tree/main/demo
 
