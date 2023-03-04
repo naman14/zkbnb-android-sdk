@@ -1,0 +1,45 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2MXVlQg4pagv22Uzah7ZoWF7pVI">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "NextRunPlatformUpdateBuild": "IC-223.8617.56/2022.3.2",
+    "NextRunPlatformUpdateVersion": "2022.3.2",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.se.text.search": "true",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "build.toolwindow.run.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "bundled.plugins.list.saved.version": "IC-221.6008.13",
+    "eclipse.projects.detected": "",
+    "file.gist.reindex.count": "2",
+    "fileTypeChangedCounter": "1",
+    "gotit.previous.run": "IC-221.6008.13",
+    "ide.memory.adjusted": "true",
+    "ide.updates.whats.new.shown.for": "221",
+    "installed.kotlin.plugin.version": "221-1.6.21-release-337-IJ6008.13",
+    "registry.to.advanced.settings.migration.build": "IC-221.6008.13",
+    "tasks.pass.word.conversion.enforced": "true"
+  },
+  "keyToStringList": {
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.android.tools.idea.sqlite.fileType.SqliteFileTypeDetector",
+      "com.android.tools.idea.profilers.capture.MemoryCaptureFileType$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ],
+    "kotlin-gradle-user-dirs": [
+      "/Users/umairmohd/.gradle"
+    ]
+  }
+}]]></component>
+</application>
