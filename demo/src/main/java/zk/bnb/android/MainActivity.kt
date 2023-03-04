@@ -59,11 +59,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initZkBnb(baseUrl: String) {
+        val networkConfig = NetworkConfig(
+            baseApiUrl = baseUrl,
+            isDebug = true
+        )
         ZkBNB.init(
-            applicationContext, NetworkConfig(
-                baseApiUrl = baseUrl,
-                isDebug = true
-            )
+            applicationContext,
+            networkConfig
         )
         ZkBNB.attach(lifecycle)
     }

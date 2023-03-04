@@ -1,6 +1,7 @@
 package zk.bnb.android
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.LinearLayout
