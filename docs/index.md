@@ -2,6 +2,31 @@
 
 Android SDK and demo for using zkbnb APIs in your Android app
 
+## Features
+
+- Fully open source
+
+- Written in Kotlin
+
+- Integration tests of SDK
+
+- Well tested
+
+- SDK Kotlin API reference HTML [page](https://naman14.github.io/zkbnb-android-sdk/api/index.html)
+
+- Comprehensive code documentation
+
+- Easier integration with Android studio plugin
+
+- All zkbnb HTTP APIs supported by the sdk
+
+- Full featured demo of SDK usage (Demo apk available to download from project Github)
+
+- [UI tests](https://github.com/naman14/zkbnb-android-sdk/blob/main/demo/demo_ui_test.mp4) of demo
+
+- Guide and demonstration video of SDK usage
+
+
 ## Install
 
 ### Using Android studio plugin
