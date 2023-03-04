@@ -31,8 +31,7 @@ implementation 'com.github.naman14:zkbnb-android-sdk:v0.1'
 
 ```
 ## API Reference
-Full SDK API reference docs are available here
-https://naman14.github.io/zkbnb-android-sdk/api/index.html
+Full SDK API reference docs are available [here](https://naman14.github.io/zkbnb-android-sdk/api/index.html)
 
 ## Usage
 
@@ -78,17 +77,16 @@ ZkBNB.getNetworkStatus(object: TaskListener<NetworkStatus> {
 })
 ```
 
-All supported APIs are listed here (All of the zkbnb HTTP APIs are currently supported by the Android SDK)- 
-https://naman14.github.io/zkbnb-android-sdk/api/zkbnb-android-sdk/zk.bnb.android.sdk/-supported-a-p-is/index.html 
+All supported APIs are listed [here](https://naman14.github.io/zkbnb-android-sdk/api/zkbnb-android-sdk/zk.bnb.android.sdk/-supported-a-p-is/index.html) (All of the zkbnb HTTP APIs are currently supported by the Android SDK)- 
 
 ## Demo
 
 <img src="https://raw.githubusercontent.com/naman14/zkbnb-android-sdk/main/demo/demo_screenshot.png" width="280">
 
-A full featured demo is also included in the source code https://github.com/naman14/zkbnb-android-sdk/tree/main/demo
+A full featured demo is also included in the [source code](https://github.com/naman14/zkbnb-android-sdk/tree/main/demo)
 
-Demo APK can also be directly downloaded from here
-https://github.com/naman14/zkbnb-android-sdk/releases/download/0.1/zkbnb-android-demo.apk
+Demo APK can also be directly downloaded from [here](https://github.com/naman14/zkbnb-android-sdk/releases/download/0.1/zkbnb-android-demo.apk)
+
 
 
 
