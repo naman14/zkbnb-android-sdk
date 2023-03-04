@@ -606,6 +606,12 @@ class ApiView(context: Context) : LinearLayout(context) {
         apiParamView.tvParamName.text = name
         apiParamView.tvParamValue.hint = hint
         apiParamView.tvParamValue.tag = name
+        if (name == "offset") {
+            apiParamView.tvParamValue.setText("0")
+        }
+        if (name == "limit") {
+            apiParamView.tvParamValue.setText("10")
+        }
         binding.viewParams.addView(apiParamView.root)
     }
 
