@@ -32,7 +32,7 @@ implementation 'com.github.naman14:zkbnb-android-sdk:v0.1'
 ```
 ## API Reference
 Full SDK API reference docs are available here
-https://naman14.github.io/zkbnb-android-sdk
+https://naman14.github.io/zkbnb-android-sdk/api/index.html
 
 ## Usage
 
@@ -79,7 +79,7 @@ ZkBNB.getNetworkStatus(object: TaskListener<NetworkStatus> {
 ```
 
 All supported APIs are listed here (All of the zkbnb HTTP APIs are currently supported by the Android SDK)- 
-https://naman14.github.io/zkbnb-android-sdk/zkbnb-android-sdk/zk.bnb.android.sdk/-supported-a-p-is/index.html 
+https://naman14.github.io/zkbnb-android-sdk/api/zkbnb-android-sdk/zk.bnb.android.sdk/-supported-a-p-is/index.html 
 
 ## Demo
 
