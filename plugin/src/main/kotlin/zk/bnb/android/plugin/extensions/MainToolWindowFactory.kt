@@ -29,7 +29,7 @@ class MainToolWindowFactory: ToolWindowFactory {
         val mainLabel = JLabel(html)
         myPanel.add(mainLabel)
 
-        val b = JButton("Click Here")
+        val b = JButton("Click here")
         myPanel.add(b)
 
 //        val subLabel = JLabel("<html><br></html>")
