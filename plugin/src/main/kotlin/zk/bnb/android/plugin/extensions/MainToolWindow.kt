@@ -13,4 +13,5 @@ class MainToolWindow(toolWindow: ToolWindow?) {
     var textArea3: JTextArea? = null
     var attachingALifecycleToTextArea: JTextArea? = null
     var textArea4: JTextArea? = null
+    var textArea5: JTextArea? = null
 }

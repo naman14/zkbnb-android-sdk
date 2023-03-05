@@ -7,7 +7,7 @@
     <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:3dlu:noGrow"/>
-    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:d:grow"/>
     <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:49px:noGrow"/>
     <rowspec value="top:3dlu:noGrow"/>
@@ -53,7 +53,7 @@
           <forms/>
         </constraints>
         <properties>
-          <text value="Click the following button to add the ZkBNB Android SDK to your project"/>
+          <text value="Add wallet sdk dependency in your app level build.gradle file"/>
         </properties>
       </component>
       <grid id="d3957" layout-manager="FormLayout">
@@ -81,15 +81,6 @@
           </component>
         </children>
       </grid>
-      <component id="e1287" class="javax.swing.JButton" binding="clickHereButton">
-        <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <text value="Click Here"/>
-        </properties>
-      </component>
       <grid id="f2355" layout-manager="FormLayout">
         <rowspec value="center:d:grow"/>
         <colspec value="fill:d:grow"/>
@@ -205,6 +196,17 @@
         </constraints>
         <properties>
           <text value="ZkBNB.getNetworkStatus(object: TaskListener&lt;NetworkStatus&gt; {&#10;    override fun onError(e: Throwable) {&#10;        Log.d(TAG, e.message)&#10;    }&#10;&#10;    override fun onSuccess(data: NetworkStatus) {&#10;        Log.d(TAG, &quot;Network status: ${data.status}, networkId: ${data.networkId}&quot;)&#10;&#10;    }&#10;})"/>
+        </properties>
+      </component>
+      <component id="c72b1" class="javax.swing.JTextArea" binding="textArea5" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="implementation 'com.github.naman14:zkbnb-android-sdk:v0.1'"/>
         </properties>
       </component>
     </children>
