@@ -8,7 +8,7 @@ Android SDK and demo for using zkbnb APIs in your Android app
 
 Go to Android Studio -> Settings -> Plugins
 
-Search for `zkbnb-android-sdk` and install it
+Search for `ZkBNB Android` and install it
 
 SDK will now be ready to use. Proceed to usage section to get started with how to use the sdk.
 
@@ -89,6 +89,12 @@ A full featured demo is also included in the source code https://github.com/nama
 
 Demo APK can also be directly downloaded from here
 https://github.com/naman14/zkbnb-android-sdk/releases/download/0.1/zkbnb-android-demo.apk
+
+## Plugin
+
+For easier integration of SDK, we have also created an Android Studio plugin to quickly and easily get started with the sdk. Plugin can be installed by searching for `ZkBNB Android` on Android Studio plugin marketplace or by downloading and importing plugin directly. 
+[Download plugin](https://github.com/naman14/zkbnb-android-sdk/releases/download/0.1/plugin-1.0-SNAPSHOT.zip)
+<img src="https://raw.githubusercontent.com/naman14/zkbnb-android-sdk/main/plugin/plugin_screenshot.jpg" width="400">
 
 
 
