@@ -1,14 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="zk.bnb.android.plugin.extensions.MainToolWindow">
-
-<grid id="27dc6" binding="toolWindowContent" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-<margin top="0" left="0" bottom="0" right="0"/>
-<constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+  <grid id="27dc6" binding="toolWindowContent" layout-manager="FormLayout">
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:49px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:42px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="top:d:noGrow"/>
+    <rowspec value="top:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:50px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="top:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="top:d:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="top:42px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="top:d:noGrow"/>
+    <colspec value="fill:d:grow"/>
+    <constraints>
+      <xy x="20" y="23" width="630" height="687"/>
     </constraints>
-    <properties/>
-    <border type="none"/>
-    <children/>
-</grid>
-
+    <properties>
+      <minimumSize width="200" height="261"/>
+      <preferredSize width="200" height="261"/>
+    </properties>
+    <border type="empty">
+      <size top="30" left="15" bottom="0" right="15"/>
+    </border>
+    <children>
+      <component id="1f70c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="20" style="1"/>
+          <text value="ZkBNB Android SDK"/>
+        </properties>
+      </component>
+      <component id="d75af" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Click the following button to add the ZkBNB Android SDK to your project"/>
+        </properties>
+      </component>
+      <grid id="d3957" layout-manager="FormLayout">
+        <rowspec value="center:d:grow"/>
+        <colspec value="fill:d:grow"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="empty">
+          <size top="15" left="0" bottom="15" right="0"/>
+        </border>
+        <children>
+          <component id="627a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-vert="false"/>
+            </constraints>
+            <properties>
+              <alignmentY value="1.0"/>
+              <font size="18"/>
+              <text value="Scaling breakthrough for BNB Chain"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="e1287" class="javax.swing.JButton" binding="clickHereButton">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="Click Here"/>
+        </properties>
+      </component>
+      <grid id="f2355" layout-manager="FormLayout">
+        <rowspec value="center:d:grow"/>
+        <colspec value="fill:d:grow"/>
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties/>
+        <border type="empty">
+          <size top="20" left="0" bottom="10" right="0"/>
+        </border>
+        <children>
+          <component id="60810" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <text value="Usage:"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="9a417" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="One time initialisation"/>
+        </properties>
+      </component>
+      <component id="99eee" class="javax.swing.JTextArea" binding="textArea1">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <lineWrap value="true"/>
+          <minimumSize width="1112" height="0"/>
+          <preferredSize width="1112" height="34"/>
+          <text value="We first need to initialise the SDK once at app launch. Your app's Application class is the ideal location to do this one time initialisation."/>
+          <wrapStyleWord value="true"/>
+        </properties>
+      </component>
+      <component id="c239f" class="javax.swing.JTextArea" binding="textArea2">
+        <constraints>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="// create a networkConfig to use in sdk&#10;val networkConfig = NetworkConfig(&#10;    baseApiUrl = baseUrl, // base api url of the zkbnb api server&#10;    isDebug = true // if true, logs network requests to Android logcat&#10;)&#10;// initialise the sdk&#10;ZkBNB.init(&#10;    applicationContext, &#10;    networkConfig&#10;)"/>
+        </properties>
+      </component>
+      <component id="c6fdd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Attach a lifecycle to SDK (Optional)"/>
+        </properties>
+      </component>
+      <component id="b4c04" class="javax.swing.JTextArea" binding="textArea3" default-binding="true">
+        <constraints>
+          <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="ZkBNB.attach(lifecycle)&#10;// lifecycle is directly available in activity or fragment"/>
+        </properties>
+      </component>
+      <component id="eaa75" class="javax.swing.JTextArea" binding="attachingALifecycleToTextArea" default-binding="true">
+        <constraints>
+          <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <editable value="false"/>
+          <lineWrap value="true"/>
+          <text value="Attaching a lifecycle to sdk is recommended. It allows SDK to&#10;automatically cancel API calls if activity is destroyed."/>
+          <wrapStyleWord value="true"/>
+        </properties>
+      </component>
+      <component id="cbf29" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Get data from SDK"/>
+        </properties>
+      </component>
+      <component id="c0cd" class="javax.swing.JTextArea" binding="textArea4" default-binding="true">
+        <constraints>
+          <grid row="23" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="ZkBNB.getNetworkStatus(object: TaskListener&lt;NetworkStatus&gt; {&#10;    override fun onError(e: Throwable) {&#10;        Log.d(TAG, e.message)&#10;    }&#10;&#10;    override fun onSuccess(data: NetworkStatus) {&#10;        Log.d(TAG, &quot;Network status: ${data.status}, networkId: ${data.networkId}&quot;)&#10;&#10;    }&#10;})"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
 </form>
