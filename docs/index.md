@@ -24,7 +24,7 @@ Android SDK and demo for using zkbnb APIs in your Android app
 
 - [UI tests](https://github.com/naman14/zkbnb-android-sdk/blob/main/demo/demo_ui_test.mp4) of demo
 
-- Guide and demonstration video of SDK usage
+- Guide and demonstration [video of SDK usage](https://youtu.be/Whc70rulFC4)
 
 
 ## Install
