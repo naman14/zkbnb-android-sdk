@@ -133,7 +133,7 @@
         <properties>
           <background color="-12828863"/>
           <lineWrap value="true"/>
-          <minimumSize width="1112" height="0"/>
+          <minimumSize width="1112" height="34"/>
           <preferredSize width="1112" height="34"/>
           <text value="We first need to initialise the SDK once at app launch. Your app's Application class is the ideal location to do this one time initialisation."/>
           <wrapStyleWord value="true"/>
