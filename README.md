@@ -25,7 +25,7 @@ allprojects {
 }
 ```
 
-Add wallet sdk dependency in your app level `build.gradle` file
+Add zkbnb sdk dependency in your app level `build.gradle` file
 ```
 implementation 'com.github.naman14:zkbnb-android-sdk:0.1'
 
